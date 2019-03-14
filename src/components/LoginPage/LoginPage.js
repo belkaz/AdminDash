@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import './Login.scss';
 import { Form, Button } from 'react-bootstrap';
 
+import { BrowserRouter as Router, 
+  Route, 
+  Switch,
+  Redirect,
+  Link } from 'react-router-dom';
+
 class LoginPage extends Component {
   render() {
     return (
@@ -22,8 +28,15 @@ class LoginPage extends Component {
         {/* <Form.Group controlId="formBasicChecbox">
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group> */}
-        <Button variant="primary" type="submit">
-          Submit
+        <Button 
+          variant="primary" 
+          type="submit"
+          onClick = { ()=>{this.props.history.push("/main");}}>
+          <Link to="/main" />
+            LogIn          
+        </Button>
+        <Button variant="warning" type="submit">
+          RegIn
         </Button>
       </Form>
       </div>
