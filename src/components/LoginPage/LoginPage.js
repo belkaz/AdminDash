@@ -31,8 +31,7 @@ class LoginPage extends Component {
         <Button 
           variant="primary" 
           type="submit"
-          onClick = { ()=>{this.props.history.push("/main");}}>
-          <Link to="/main" />
+          onClick = { ()=>{this.props.history.push("/main");}}>          
             LogIn          
         </Button>
         <Button variant="warning" type="submit">
