@@ -10,23 +10,23 @@ class PO1Panel extends Component {
             <div className = 'PO1Panel'>
                 <PO1Unit 
                     val = {this.props.rr[0]} 
-                    unit = '16401' 
+                    unit = '1' 
                     lef = '10'/>
                 <PO1Unit 
                     val = {this.props.rr[1]} 
-                    unit = '16402' 
+                    unit = '2' 
                     lef = '110'/>
                 <PO1Unit 
                     val = {this.props.rr[2]}
-                    unit = '16403' 
+                    unit = '3' 
                     lef = '210'/>
                 <PO1Unit 
                     val = {this.props.rr[3]}
-                    unit = '16404' 
+                    unit = '4' 
                     lef = '310'/>
                 <PO1Unit 
                     val = {this.props.rr[4]} 
-                    unit = '16464' 
+                    unit = '5' 
                     lef = '410'/>
             </div>
         )

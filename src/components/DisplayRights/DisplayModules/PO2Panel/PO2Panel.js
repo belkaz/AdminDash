@@ -5,7 +5,7 @@ import './PO2Panel.css' ;
 import PO2Unit from '../PO2Unit/PO2Unit.js';
 
 class PO2Panel extends Component {
-    units = ['16401', '16402', '16403', '16404', '16464'];
+    units = ['1', '2', '3', '4', '5'];
     lefs = [10, 185, 360, 535, 710];
     cc = [0,1,2,3,4].map ((el) => {
             return <PO2Unit
