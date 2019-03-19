@@ -3,19 +3,35 @@ import './App.scss';
 
 import { connect } from 'react-redux'; 
 
+import LoginPage from '../LoginPage/LoginPage';
+import CMain from '../Main/Main';
+import CAdmin from '../Admin/Admin';
+
 class App extends Component {
+    hz = () => {    
+      switch ( this.props.showScreen ) {
+        case 'user' : {
+          return <CMain />
+        };    
+        case 'admin' : {
+         return <CAdmin />;
+        };
+        default: { 
+          return <LoginPage />
+        }
+    };
+  }
   render() {
-    return (
+    return (      
       <div className="App">
-        !  {this.props.id}   
+        { this.hz() }
       </div>
     );
   }
 }
-
 let mapState = state => {
   return {
-    id : state.id
+    showScreen : state.showScreen
   }
 }
 
