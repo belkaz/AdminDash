@@ -1,16 +1,16 @@
-.ASKDUnit {
+.PO1Unit {
     position: absolute;
     width : 90px;
     height : 50px;    
 }
-.ASKDUnitLab {
+.PO1UnitLab {
     position: absolute;
     width: 100%;
     top: 5px;
     left: 0px;
     text-align: center;
 }
-.ASKDUnitCh {
+.PO1UnitCh {
     position: absolute;
     width: 90px;
     height: 20px;

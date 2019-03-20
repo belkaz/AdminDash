@@ -28,14 +28,14 @@ class DisplayRights extends Component {
         return (
             <div className = 'DisplayRights'>
                 { this.props.FIO } 
-                <PO0Panel rr = { {} }/>
-                <PO1Panel rr = { {} }/>
-                <PO2Panel rr = { {} }/>
-                <PO3Panel rr = { {} }/>
-                <SinglePO po = 'PO4' ch = { '' } tt = '450'/>
-                <SinglePO po = 'PO5' ch = { '' } tt = '500'/>
-                <SinglePO po = 'PO6' ch = { '' } tt = '550'/>
-                <SinglePO po = 'PO7' ch = { '' } tt = '600'/>
+                <PO0Panel rr = { this.state.po0 }/>
+                <PO1Panel rr = { this.state.po1 }/>
+                <PO2Panel rr = { this.state.po2 }/>
+                <PO3Panel rr = { this.state.po3 }/>
+                <SinglePO po = 'PO4' ch = { this.state.po4 } tt = '450'/>
+                <SinglePO po = 'PO5' ch = { this.state.po5 } tt = '500'/>
+                <SinglePO po = 'PO6' ch = { this.state.po6 } tt = '550'/>
+                <SinglePO po = 'PO7' ch = { this.state.po7 } tt = '600'/>
             </div>
         )
     }
