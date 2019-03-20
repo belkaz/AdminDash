@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Login.scss';
 import { Form, Button } from 'react-bootstrap';
 
-import { tryToLog } from '../../redux/actions/tryTolog';
+import { AtryToLog } from '../../redux/actions/tryTolog';
 
 import { connect } from 'react-redux';
 
@@ -16,6 +16,9 @@ class LoginPage extends Component {
   loginTextHandler = (e) => {
     this.setState ({login: e.target.value})   
   }
+  tryToLog = () => {
+    this.props.login( this.state.login )
+  } 
   render() {
     return (
       <div className="App">
@@ -41,8 +44,10 @@ class LoginPage extends Component {
         <Button 
           variant="primary" 
           type="submit"
-          onClick = { ()=>{                            
-              this.props.login(this.state.login)} }>
+          onClick = { ()=>{    
+              console.log ( this.props.showScreen) ;                       
+              this.tryToLog();
+              console.log ( this.state.login +'  '+this.props.showScreen) ; }}>              
           Submit
         </Button>
       </Form>
@@ -53,13 +58,13 @@ class LoginPage extends Component {
 
 let mapState = state => {
   return {
-
-  }
+      showScreen : state.showScreen
+    } 
 }
 
 let dispEv = dispatch => {
   return {
-    login: logpass => dispatch(tryToLog(logpass)),
+    login: logpass => dispatch(AtryToLog(logpass)),
   }
 }
 

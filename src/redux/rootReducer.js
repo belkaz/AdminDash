@@ -6,8 +6,7 @@ const red = ( state = initState, action ) => {
             return {              
                 ...state,
                 showScreen : action.payload
-            };
-            break;
+            };           
         }
         default :
             return state

@@ -4,34 +4,30 @@ import './App.scss';
 import { connect } from 'react-redux'; 
 
 import LoginPage from '../LoginPage/LoginPage';
-import CMain from '../Main/Main';
-import CAdmin from '../Admin/Admin';
+// import CMain from '../Main/Main';
+// import CAdmin from '../Admin/Admin';
 
-class App extends Component {
-    hz = () => {    
-      switch ( this.props.showScreen ) {
-        case 'user' : {
-          return <CMain />
-        };    
-        case 'admin' : {
-         return <CAdmin />;
-        };
-        default: { 
-          return <LoginPage />
-        }
-    };
+class App extends Component {     
+  constructor ( props ) {
+    super ( props );
+    this.state = {
+      curPage : this.props.curPage
+    }
   }
   render() {
-    return (      
-      <div className="App">
-        { this.hz() }
+    return (
+      <div className = 'App'>
+      {this.state.curPage}
+      {this.props.curPage}
+        <LoginPage />
       </div>
-    );
+    )
   }
 }
-let mapState = state => {
+
+const mapState = state => {
   return {
-    showScreen : state.showScreen
+    curPage : state.showScreen
   }
 }
 

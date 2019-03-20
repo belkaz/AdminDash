@@ -1,6 +1,6 @@
-export const tryToLog = logpass => {
+export const AtryToLog = logpass => {
     return {
         type: 'LOGIN',
-        payload: logpass
+        payload: logpass      
     }
 }

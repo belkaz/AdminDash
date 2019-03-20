@@ -1,0 +1,11 @@
+.UserForm {
+    position: absolute;
+    width: 300px;
+    margin-left: -150px;
+    left: 50%;
+    top: 5%;
+    align-content: center;
+}
+.MainSearchCode0, .MainSearchCode1 {
+    text-align: center;
+}
