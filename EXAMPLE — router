@@ -1,2 +1,0 @@
-for programm redirect
-	onClick = { ()=>{this.props.history.push("/main");}

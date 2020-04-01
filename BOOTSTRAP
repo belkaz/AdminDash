@@ -1,9 +1,0 @@
-npm install node-sass --save
-
-npm install react-bootstrap bootstrap
-
-into index.js 
-        import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-        
